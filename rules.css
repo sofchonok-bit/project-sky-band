@@ -1,0 +1,687 @@
+/* =====================================================
+   RULES.CSS
+   Страница "Правила"
+===================================================== */
+
+
+/* ===========================
+   ОСНОВНАЯ ОБЛАСТЬ
+=========================== */
+
+
+.rules{
+
+
+    position:relative;
+
+
+    z-index:1;
+
+
+    margin-left:90px;
+
+
+    min-height:100vh;
+
+
+    padding:70px;
+
+
+
+    background:
+
+
+    linear-gradient(
+        rgba(16,13,23,0.85),
+        rgba(16,13,23,0.95)
+    ),
+
+
+    url("images/background/rules.jpg");
+
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    color:#e3f3ff;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+/* ===========================
+   ЗАГОЛОВОК
+=========================== */
+
+
+.rules-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+    animation:
+    rulesFade 0.8s ease;
+
+}
+
+
+
+.rules-header h1{
+
+
+    font-size:64px;
+
+    letter-spacing:8px;
+
+    margin:0;
+
+    color:#e3f3ff;
+
+
+    text-shadow:
+
+    0 0 15px rgba(225,243,255,0.4),
+
+    0 0 35px rgba(209,55,53,0.35);
+
+
+}
+
+
+
+.rules-header p{
+
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    color:#8d80b3;
+
+}
+
+
+
+/* ===========================
+   СЕТКА КАРТОЧЕК
+=========================== */
+
+
+.rules-grid{
+
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(
+        2,
+        minmax(320px,1fr)
+    );
+
+
+    gap:35px;
+
+
+    max-width:1200px;
+
+    margin:auto;
+
+
+}
+
+
+
+/* ===========================
+   КАРТОЧКА ПРАВИЛА
+=========================== */
+
+
+.rule-card{
+
+
+    position:relative;
+
+
+    padding:35px;
+
+
+    min-height:230px;
+
+
+    background:
+
+    rgba(41,37,54,0.75);
+
+
+
+    border:
+
+    1px solid rgba(227,243,255,0.15);
+
+
+
+    border-radius:25px;
+
+
+
+    backdrop-filter:
+
+    blur(10px);
+
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,0.35);
+
+
+
+    transition:
+
+    0.35s ease;
+
+
+
+    animation:
+
+    rulesCard 0.8s ease backwards;
+
+
+}
+
+
+
+
+
+.rule-card:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+
+    border-color:
+
+    rgba(209,55,53,0.7);
+
+
+
+    box-shadow:
+
+
+    0 20px 50px rgba(209,55,53,0.25);
+
+
+
+}
+
+
+
+
+
+/* ===========================
+   НОМЕР
+=========================== */
+
+
+.rule-number{
+
+
+    position:absolute;
+
+
+    top:20px;
+
+    right:30px;
+
+
+
+    font-size:45px;
+
+
+    font-weight:bold;
+
+
+
+    color:
+
+    rgba(227,243,255,0.15);
+
+
+
+}
+
+
+
+
+/* ===========================
+   ТЕКСТ
+=========================== */
+
+
+.rule-card h2{
+
+
+    position:relative;
+
+
+    font-size:28px;
+
+
+    margin-bottom:20px;
+
+
+    color:#ffffff;
+
+
+
+}
+
+
+
+.rule-card p{
+
+
+    position:relative;
+
+
+    line-height:1.7;
+
+
+    font-size:17px;
+
+
+    color:#cfc9e8;
+
+
+
+}
+
+
+
+
+
+/* ===========================
+   ОПАСНЫЙ БЛОК
+=========================== */
+
+
+.rule-card.danger{
+
+
+    border-color:
+
+    rgba(209,55,53,0.4);
+
+
+
+}
+
+
+
+.rule-card.danger:hover{
+
+
+    box-shadow:
+
+    0 20px 50px rgba(209,55,53,0.4);
+
+
+
+}
+
+
+
+.rule-card.danger h2{
+
+
+    color:#ff7777;
+
+
+}
+
+
+
+
+/* ===========================
+   КОДЕКС ПИЛОТА
+=========================== */
+
+
+.pilot-code{
+
+
+    max-width:900px;
+
+
+    margin:
+
+    80px auto 0;
+
+
+
+    padding:45px;
+
+
+
+    text-align:center;
+
+
+
+    background:
+
+    rgba(41,37,54,0.65);
+
+
+
+    border-radius:30px;
+
+
+
+    border:
+
+    1px solid rgba(227,243,255,0.12);
+
+
+
+    backdrop-filter:
+
+    blur(12px);
+
+
+
+    animation:
+
+    rulesFade 1s ease;
+
+
+
+}
+
+
+
+
+
+.pilot-code h2{
+
+
+    font-size:36px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.pilot-code blockquote{
+
+
+    margin:0;
+
+
+    font-size:22px;
+
+
+    line-height:1.7;
+
+
+    font-style:italic;
+
+
+    color:#e3f3ff;
+
+
+}
+
+
+
+
+
+/* ===========================
+   АНИМАЦИИ
+=========================== */
+
+
+@keyframes rulesFade{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+@keyframes rulesCard{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+/* ===========================
+   АДАПТИВ
+=========================== */
+
+
+@media(max-width:900px){
+
+
+    .rules{
+
+        margin-left:0;
+
+        padding:40px 25px;
+
+    }
+
+
+
+    .rules-grid{
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+    }
+
+
+
+    .rules-header h1{
+
+        font-size:42px;
+
+    }
+
+
+
+}
+
+/* ===========================
+   КНОПКА ПОЛНОГО СВОДА
+=========================== */
+
+
+.full-rules-button{
+
+    margin-top:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.full-rules-button a{
+
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    padding:18px 40px;
+
+
+    border-radius:18px;
+
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #e84b46,
+        #d13735
+    );
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-size:18px;
+
+    font-weight:700;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(209,55,53,.35);
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+.full-rules-button a:hover{
+
+
+    transform:
+
+    translateY(-5px);
+
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #ff5b56,
+        #d13735
+    );
+
+
+    box-shadow:
+
+    0 18px 45px rgba(209,55,53,.5);
+
+
+}
+.sidebar nav a.active{
+
+    background:rgba(209,55,53,.18);
+
+    color:var(--red);
+
+}
+
+
+.sidebar nav a.active{
+
+    background:rgba(209,55,53,.18);
+
+    color:var(--red);
+
+}
+
+
+.sidebar nav a.active i{
+
+    color:var(--red);
+
+}
+/* ===========================
+   СЛОИ СТРАНИЦЫ
+=========================== */
+
+
+.rules-header,
+.rules-grid,
+.pilot-code{
+
+    position:relative;
+
+    z-index:2;
+
+}

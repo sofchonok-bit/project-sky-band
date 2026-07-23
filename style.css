@@ -1,0 +1,1166 @@
+/* ===========================
+   СБРОС
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===========================
+   ШРИФТ
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* ===========================
+   ЦВЕТА
+=========================== */
+
+:root{
+
+    --red:#d13735;
+    --red-dark:#6d0f34;
+
+    --bg:#100d17;
+    --panel:#292536;
+
+    --text:#e3f3ff;
+    --secondary:#8d80b3;
+
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:'Manrope',sans-serif;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    position:relative;
+
+}
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:90px;
+    height:100vh;
+
+    background:var(--panel);
+
+    border-right:2px solid var(--red-dark);
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    z-index:1000;
+
+}
+
+.sidebar:hover{
+
+    width:250px;
+
+}
+
+/* ===========================
+   ЛОГО
+=========================== */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+
+    padding:26px 24px;
+
+    min-height:90px;
+
+}
+
+.logo i{
+
+    width:28px;
+
+    text-align:center;
+
+    flex-shrink:0;
+
+    color:var(--red);
+
+    font-size:34px;
+
+}
+
+.logo span{
+
+    font-size:18px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+
+    opacity:0;
+
+    transition:.25s;
+
+}
+
+.sidebar:hover .logo span{
+
+    opacity:1;
+
+}
+
+/* ===========================
+   МЕНЮ
+=========================== */
+
+nav{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-top:18px;
+
+}
+
+nav a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    height:58px;
+
+    padding:0 30px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    transition:.25s;
+
+    white-space:nowrap;
+
+}
+
+nav a i{
+
+    width:24px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    color:var(--secondary);
+
+    flex-shrink:0;
+
+}
+
+nav a span{
+
+    opacity:0;
+
+    transition:.25s;
+
+}
+
+.sidebar:hover nav a span{
+
+    opacity:1;
+
+}
+
+nav a:hover{
+
+    background:rgba(255,255,255,.05);
+
+    color:var(--red);
+
+}
+
+nav a:hover i{
+
+    color:var(--red);
+
+}
+
+/* ===========================
+   КНОПКА
+=========================== */
+
+.join-btn{
+
+    margin-top:auto;
+
+    margin-bottom:22px;
+
+    width:58px;
+    height:58px;
+
+    align-self:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:var(--red);
+
+    color:white;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.join-btn i{
+
+    width:20px;
+
+    text-align:center;
+
+    flex-shrink:0;
+
+    font-size:20px;
+
+}
+
+.join-btn span{
+
+    width:0;
+
+    opacity:0;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    transition:.25s;
+
+}
+
+.sidebar:hover .join-btn{
+
+    width:210px;
+
+}
+
+.sidebar:hover .join-btn span{
+
+    width:auto;
+
+    opacity:1;
+
+}
+
+.join-btn:hover{
+
+    background:var(--red-dark);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main{
+
+    margin-left:90px;
+
+    transition:.35s;
+
+}
+
+.sidebar:hover + main{
+
+    margin-left:250px;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    position:relative;
+
+overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(16,13,23,.55),
+            rgba(16,13,23,.55)
+        ),
+        url("images/background/sky.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/* ===========================
+   ЛЕТЯЩАЯ ЗВЕЗДА
+=========================== */
+
+
+.star-fly{
+
+    position:absolute;
+
+    width:80px;
+    height:80px;
+
+    left:-150px;
+    top:65%;
+
+
+    z-index:5;
+
+
+    animation:
+
+    starMove 2s ease-in-out forwards;
+
+}
+
+
+
+.star-fly svg{
+
+
+    width:100%;
+
+    height:100%;
+
+
+    fill:#ffffff;
+
+
+    filter:
+
+    drop-shadow(0 0 10px #ffffff)
+
+    drop-shadow(0 0 35px #9fdcff)
+
+    drop-shadow(0 0 60px #5aaeff);
+
+
+     animation:
+
+    starPulse .7s ease-in-out infinite alternate;
+
+    transform-origin:center;
+
+}
+
+
+
+
+
+/* светящийся хвост */
+
+
+.star-trail{
+
+
+    position:absolute;
+
+
+    right:55px;
+
+    top:35px;
+
+
+    width:260px;
+
+    height:18px;
+
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(190,230,255,.8),
+        rgba(255,255,255,.9)
+    );
+
+
+    filter:
+
+    blur(10px);
+
+
+    transform:
+
+    rotate(-20deg);
+
+
+    transform-origin:right center;
+
+
+    animation:
+
+    trailFade 2s ease forwards;
+
+
+}
+
+
+
+
+@keyframes starMove{
+
+
+    0%{
+
+        left:-150px;
+
+        top:65%;
+
+        opacity:0;
+
+        transform:
+        rotate(-20deg)
+        scale(.5);
+
+    }
+
+
+    15%{
+
+        opacity:1;
+
+    }
+
+
+
+    70%{
+
+        opacity:1;
+
+    }
+
+
+
+    100%{
+
+        left:110%;
+
+        top:20%;
+
+        opacity:0;
+
+        transform:
+        rotate(30deg)
+        scale(1);
+
+    }
+
+
+}
+
+
+
+
+
+@keyframes starPulse{
+
+
+    from{
+
+        transform:scale(.9);
+
+    }
+
+
+    to{
+
+        transform:scale(1.15);
+
+    }
+
+
+}
+
+
+
+
+
+@keyframes trailFade{
+
+
+    0%{
+
+        opacity:0;
+
+        width:0;
+
+    }
+
+
+    20%{
+
+        opacity:1;
+
+        width:260px;
+
+    }
+
+
+    100%{
+
+        opacity:0;
+
+        width:80px;
+
+    }
+
+
+}
+
+
+
+/* ===========================
+   ЗАГОЛОВОК
+=========================== */
+
+.hero h1{
+
+    font-size:110px;
+    font-weight:900;
+    line-height:.95;
+
+    margin-bottom:28px;
+
+    letter-spacing:2px;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #eef9ff 35%,
+        #b9e7ff 70%,
+        #ffffff 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+    text-shadow:
+        0 0 18px rgba(170,220,255,.45),
+        0 0 45px rgba(110,180,255,.25),
+        0 10px 35px rgba(0,0,0,.45);
+
+    opacity:0;
+    animation:titleAppear 1.2s ease forwards;
+    animation-delay:2s;
+}
+
+
+/* ===========================
+   ПОДЗАГОЛОВОК
+=========================== */
+
+.hero p{
+
+    max-width:900px;
+
+    margin:0 auto 55px;
+
+    font-size:34px;
+    font-weight:700;
+
+    color:#d9ebff;
+
+    text-shadow:
+        0 0 12px rgba(150,210,255,.35),
+        0 2px 12px rgba(0,0,0,.55);
+
+    opacity:0;
+    animation:titleAppear 1.2s ease forwards;
+    animation-delay:2.2s;
+
+}
+
+
+/* ===========================
+   КНОПКА
+=========================== */
+
+.hero button{
+
+    padding:22px 56px;
+
+    border:none;
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:22px;
+    font-weight:700;
+
+    color:#fff;
+
+    background:linear-gradient(
+        180deg,
+        #e84b46,
+        #d13735
+    );
+
+    box-shadow:
+        0 12px 35px rgba(209,55,53,.35),
+        0 0 25px rgba(120,190,255,.15);
+
+    transition:.3s;
+
+    opacity:0;
+    animation:titleAppear 1.2s ease forwards;
+    animation-delay:2.5s;
+
+}
+
+.hero button:hover{
+
+    transform:translateY(-4px);
+
+    background:linear-gradient(
+        180deg,
+        #ff5b56,
+        #d13735
+    );
+
+    box-shadow:
+        0 18px 45px rgba(209,55,53,.45);
+
+}
+
+
+/* ===========================
+   АНИМАЦИЯ
+=========================== */
+
+@keyframes titleAppear{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+        filter:blur(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+
+    }
+
+}
+
+/* ===========================
+   FIX СЛОЕВ
+=========================== */
+
+
+main{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+/* ===========================
+   ТИХИЕ ЗВЕЗДЫ НА ГЛАВНОЙ
+=========================== */
+
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* слой звезд */
+
+.stars-layer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+
+/* сами звезды */
+
+.stars-layer span:nth-child(1){
+    top:12%;
+    left:8%;
+}
+
+.stars-layer span:nth-child(2){
+    top:25%;
+    left:20%;
+}
+
+.stars-layer span:nth-child(3){
+    top:10%;
+    left:42%;
+}
+
+.stars-layer span:nth-child(4){
+    top:18%;
+    left:75%;
+}
+
+.stars-layer span:nth-child(5){
+    top:35%;
+    left:90%;
+}
+
+.stars-layer span:nth-child(6){
+    top:70%;
+    left:8%;
+}
+
+.stars-layer span:nth-child(7){
+    top:82%;
+    left:20%;
+}
+
+.stars-layer span:nth-child(8){
+    top:75%;
+    left:90%;
+}
+
+.stars-layer span:nth-child(9){
+    top:88%;
+    left:65%;
+}
+
+.stars-layer span:nth-child(10){
+    top:60%;
+    left:85%;
+}
+
+.stars-layer span:nth-child(11){
+    top:45%;
+    left:5%;
+}
+
+.stars-layer span:nth-child(12){
+    top:15%;
+    left:92%;
+}
+
+.stars-layer span:nth-child(13){
+    top:80%;
+    left:45%;
+}
+
+.stars-layer span:nth-child(14){
+    top:30%;
+    left:65%;
+}
+
+.stars-layer span:nth-child(15){
+    top:90%;
+    left:12%;
+}
+
+.stars-layer span:nth-child(16){
+    top:55%;
+    left:95%;
+}
+
+.stars-layer span:nth-child(17){
+    top:8%;
+    left:58%;
+}
+
+.stars-layer span:nth-child(18){
+    top:72%;
+    left:30%;
+}
+
+.stars-layer span:nth-child(3n){
+    width:6px;
+    height:6px;
+}
+
+
+.stars-layer span:nth-child(4n){
+    animation-duration:5s;
+}
+
+
+.stars-layer span:nth-child(5n){
+    opacity:.35;
+}
+
+/* ===========================
+   ЛУЧИ СВЕТА ИЗ-ЗА ОБЛАКОВ
+=========================== */
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+
+    top:-250px;
+
+    right:-180px;
+
+
+    width:700px;
+
+    height:700px;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.45) 0%,
+        rgba(210,235,255,.28) 25%,
+        rgba(130,190,255,.12) 45%,
+        transparent 70%
+    );
+
+
+    filter:blur(25px);
+
+
+    pointer-events:none;
+
+
+    z-index:1;
+
+}
+
+
+
+/* отдельные световые полосы */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+
+    top:-80px;
+
+    right:-120px;
+
+
+    width:900px;
+
+    height:500px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.28),
+        transparent 60%
+    );
+
+
+    filter:blur(35px);
+
+
+    opacity:.8;
+
+
+    pointer-events:none;
+
+
+    z-index:1;
+
+}
+
+
+/* чтобы всё важное было поверх света */
+
+.hero h1,
+.hero p,
+.hero button{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+
+.star-fly{
+
+    position:absolute;
+
+    z-index:5;
+
+}
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(130,190,255,.18),
+            transparent 45%
+        ),
+        #100d17;
+
+    z-index:99999;
+
+    transition:opacity .8s ease, visibility .8s ease;
+
+}
+
+#loader.hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+    width:500px;
+
+}
+
+.loader-logo{
+
+    font-size:80px;
+
+    color:#ffffff;
+
+    filter:
+        drop-shadow(0 0 15px #ffffff)
+        drop-shadow(0 0 35px #8fd4ff);
+
+    animation:loaderGlow 2s ease-in-out infinite alternate;
+
+}
+
+.loader-content h1{
+
+    margin:25px 0 35px;
+
+    font-size:54px;
+
+    letter-spacing:8px;
+
+    color:white;
+
+}
+
+.loader-cloud{
+
+    width:220px;
+
+    height:65px;
+
+    margin:0 auto 35px;
+
+    border-radius:100px;
+
+    background:
+        radial-gradient(circle at 30% 50%, #ffffff 0%, #eaf8ff 45%, transparent 46%),
+        radial-gradient(circle at 50% 35%, #ffffff 0%, #eefaff 48%, transparent 49%),
+        radial-gradient(circle at 70% 55%, #ffffff 0%, #eefaff 45%, transparent 46%);
+
+    opacity:.85;
+
+    filter:blur(2px);
+
+    animation:cloudFloat 4s ease-in-out infinite;
+
+}
+
+.loader-progress{
+
+    width:100%;
+
+    height:10px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.08);
+
+    margin-bottom:20px;
+
+}
+
+.loader-progress-bar{
+
+    width:0;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8fdcff,
+            #ffffff,
+            #8fdcff
+        );
+
+    animation:loadingBar 2.8s linear forwards;
+
+}
+
+.loader-text{
+
+    color:#b8dfff;
+
+    font-size:18px;
+
+    letter-spacing:1px;
+
+}
+
+/* =========================== */
+
+@keyframes loadingBar{
+
+    from{width:0;}
+
+    to{width:100%;}
+
+}
+
+@keyframes cloudFloat{
+
+    0%{
+        transform:translateX(-15px);
+    }
+
+    50%{
+        transform:translateX(15px);
+    }
+
+    100%{
+        transform:translateX(-15px);
+    }
+
+}
+
+@keyframes loaderGlow{
+
+    from{
+
+        filter:
+            drop-shadow(0 0 15px #ffffff)
+            drop-shadow(0 0 25px #8fdcff);
+
+    }
+
+    to{
+
+        filter:
+            drop-shadow(0 0 25px #ffffff)
+            drop-shadow(0 0 50px #8fdcff);
+
+    }
+
+}

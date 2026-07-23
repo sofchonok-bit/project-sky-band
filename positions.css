@@ -1,0 +1,155 @@
+/* =====================================================
+   POSITIONS.CSS
+===================================================== */
+
+.positions-page{
+
+    margin-left:90px;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(120,190,255,.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            rgba(16,13,23,.92),
+            rgba(16,13,23,.98)
+        ),
+        url("images/background/sky.png");
+
+    background-size:cover;
+    background-position:center;
+
+    color:#e3f3ff;
+}
+
+.positions-empty{
+
+    width:700px;
+    max-width:100%;
+
+    text-align:center;
+
+    padding:70px 60px;
+
+    border-radius:35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.04)
+        );
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45),
+        0 0 35px rgba(120,190,255,.12);
+
+    animation:appear .8s ease;
+}
+
+.positions-empty i{
+
+    font-size:90px;
+
+    color:#9fdcff;
+
+    margin-bottom:30px;
+
+    text-shadow:
+        0 0 30px rgba(120,190,255,.45);
+}
+
+.positions-empty h1{
+
+    font-size:56px;
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+    background:linear-gradient(
+        120deg,
+        #ffffff,
+        #bde9ff,
+        #ffffff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.positions-empty p{
+
+    font-size:22px;
+
+    color:#cfdff5;
+
+    line-height:1.8;
+
+    max-width:520px;
+
+    margin:auto;
+}
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .positions-page{
+
+        margin-left:0;
+        padding:30px;
+
+    }
+
+    .positions-empty{
+
+        padding:45px 30px;
+
+    }
+
+    .positions-empty h1{
+
+        font-size:40px;
+
+    }
+
+    .positions-empty p{
+
+        font-size:18px;
+
+    }
+
+}

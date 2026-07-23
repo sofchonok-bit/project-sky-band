@@ -1,0 +1,617 @@
+/* =====================================================
+   ADMINISTRATION.CSS
+   Небесный Вираж
+===================================================== */
+
+
+/* ОСНОВА */
+
+.administration{
+
+    margin-left:90px;
+
+    min-height:100vh;
+
+    padding:80px;
+
+    color:#e3f3ff;
+
+
+    background:
+
+    radial-gradient(
+        circle at top right,
+        rgba(120,190,255,.18),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        rgba(16,13,23,.92),
+        rgba(16,13,23,.98)
+    ),
+
+    url("images/background/sky.png");
+
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+
+.admin-header{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+
+.admin-header h1{
+
+    font-size:70px;
+
+    letter-spacing:10px;
+
+
+    background:
+    linear-gradient(
+        120deg,
+        white,
+        #bde9ff,
+        white
+    );
+
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+
+    text-shadow:
+
+    0 0 30px rgba(130,200,255,.35);
+
+}
+
+
+
+.admin-header p{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:#a9c8e8;
+
+}
+
+
+
+/* ===========================
+   ОПИСАНИЕ
+=========================== */
+
+
+.admin-description{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:35px;
+
+
+    text-align:center;
+
+
+    font-size:19px;
+
+    line-height:1.7;
+
+
+    border-radius:30px;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    border:
+
+    1px solid rgba(190,230,255,.2);
+
+
+    backdrop-filter:blur(15px);
+
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.4);
+
+}
+
+
+
+/* ===========================
+   НАЗВАНИЯ
+=========================== */
+
+
+.section-title{
+
+    text-align:center;
+
+    margin:70px 0 35px;
+
+
+    font-size:38px;
+
+    letter-spacing:3px;
+
+
+    text-shadow:
+
+    0 0 20px rgba(180,220,255,.35);
+
+}
+
+
+
+/* =====================================================
+   БОЛЬШИЕ КАРТОЧКИ
+===================================================== */
+
+
+.big-card{
+
+
+    width:430px;
+
+    min-height:500px;
+
+
+    margin:40px auto;
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    text-align:center;
+
+
+    padding:40px;
+
+
+    border-radius:35px;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.12),
+        rgba(41,37,54,.9)
+    );
+
+
+    border:
+
+    1px solid rgba(255,255,255,.2);
+
+
+
+    backdrop-filter:blur(18px);
+
+
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.5);
+
+
+    transition:.4s;
+
+}
+
+
+
+.big-card:hover{
+
+    transform:
+
+    translateY(-12px);
+
+
+    box-shadow:
+
+    0 35px 90px rgba(120,190,255,.3);
+
+}
+
+
+
+.big-card img{
+
+
+    width:230px;
+
+    height:230px;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+    border:
+
+    5px solid rgba(255,255,255,.3);
+
+
+    box-shadow:
+
+    0 0 40px rgba(150,220,255,.45);
+
+
+    margin-bottom:25px;
+
+}
+
+
+
+.big-card h2{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.role{
+
+    color:#9fdcff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+
+
+/* ===========================
+   ВОПРОС
+=========================== */
+
+
+.question-mark{
+
+
+    width:230px;
+
+    height:230px;
+
+
+    margin:0 auto 25px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    border-radius:50%;
+
+
+    font-size:120px;
+
+    font-weight:800;
+
+
+    color:#bde9ff;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    border:
+
+    3px dashed rgba(190,230,255,.4);
+
+
+    box-shadow:
+
+    0 0 40px rgba(120,190,255,.25);
+
+}
+
+
+
+/* ===========================
+   ИНФОРМАЦИЯ ПРИ НАВЕДЕНИИ
+=========================== */
+
+
+.admin-info{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    padding:45px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+
+    text-align:center;
+
+
+    background:
+
+    rgba(16,13,23,.94);
+
+
+    backdrop-filter:blur(15px);
+
+
+    opacity:0;
+
+
+    transition:.4s;
+
+}
+
+
+
+.big-card:hover .admin-info,
+.admin-card:hover .admin-info{
+
+    opacity:1;
+
+}
+
+
+
+.admin-info h3{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.admin-info p{
+
+    color:#cfdff5;
+
+    line-height:1.7;
+
+}
+
+
+
+/* =====================================================
+   МАЛЕНЬКИЕ КАРТОЧКИ
+===================================================== */
+
+
+.cards{
+
+
+    max-width:1200px;
+
+    margin:auto;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:35px;
+
+}
+
+
+
+.admin-card{
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    min-height:380px;
+
+
+    padding:30px;
+
+
+    text-align:center;
+
+
+    border-radius:30px;
+
+
+    background:
+
+    rgba(41,37,54,.85);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+    backdrop-filter:blur(15px);
+
+
+    transition:.35s;
+
+
+}
+
+
+
+.admin-card:hover{
+
+
+    transform:
+
+    translateY(-10px);
+
+
+    box-shadow:
+
+    0 25px 70px rgba(120,190,255,.25);
+
+}
+
+
+
+
+.admin-card img{
+
+
+    width:160px;
+
+    height:160px;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+    margin-bottom:25px;
+
+}
+
+
+
+.admin-card h3{
+
+    font-size:25px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.admin-card p{
+
+    color:#9fdcff;
+
+}
+
+
+
+/* ===========================
+   АНИМАЦИЯ
+=========================== */
+
+
+.admin-header,
+.admin-description,
+.big-card,
+.admin-card{
+
+    animation:
+
+    adminAppear .8s ease backwards;
+
+}
+
+
+
+@keyframes adminAppear{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/* ===========================
+   АДАПТИВ
+=========================== */
+
+
+@media(max-width:900px){
+
+
+.administration{
+
+    margin-left:0;
+
+    padding:40px 20px;
+
+}
+
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.big-card{
+
+    width:90%;
+
+}
+
+}
