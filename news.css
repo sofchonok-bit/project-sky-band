@@ -1,6 +1,14 @@
 /* =====================================================
    NEWS.CSS
+   Страница новостей
+   Проект "Небесный Вираж"
 ===================================================== */
+
+
+
+/* ===========================
+   ОСНОВНАЯ СТРАНИЦА
+=========================== */
 
 .news-page{
 
@@ -8,184 +16,337 @@
 
     min-height:100vh;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
     padding:70px;
 
     background:
-        radial-gradient(circle at top right,
-        rgba(120,190,255,.18),
-        transparent 35%),
 
-        linear-gradient(
-        rgba(16,13,23,.92),
-        rgba(16,13,23,.98)
-        ),
+    linear-gradient(
+        rgba(190,225,255,0.35),
+        rgba(255,255,255,0.65)
+    ),
 
-        url("images/background/sky.png");
+    url("images/cloud-bg.jpg");
 
     background-size:cover;
-    background-position:center;
 
-    color:#e3f3ff;
+    background-position:center;
 
 }
 
-.placeholder{
 
-    max-width:760px;
 
-    width:100%;
+
+
+/* ===========================
+   ЗАГОЛОВОК
+=========================== */
+
+
+.news-header{
+
+    max-width:900px;
+
+    margin:0 auto 50px;
 
     text-align:center;
 
-    padding:60px;
+}
 
-    border-radius:35px;
 
-    background:
-        linear-gradient(
-        145deg,
-        rgba(255,255,255,.08),
-        rgba(255,255,255,.03)
-        );
 
-    border:1px solid rgba(227,243,255,.15);
+.news-header h1{
 
-    backdrop-filter:blur(18px);
+    font-size:46px;
 
-    box-shadow:
-        0 25px 70px rgba(0,0,0,.45);
+    color:#2878c7;
 
-    animation:fade .8s ease;
+    text-shadow:
+
+    0 0 15px rgba(80,170,255,0.5);
+
+    margin-bottom:15px;
 
 }
 
-.placeholder-icon{
 
-    width:120px;
-    height:120px;
 
-    margin:0 auto 35px;
+.news-header p{
+
+    font-size:18px;
+
+    color:#54708a;
+
+    line-height:1.6;
+
+}
+
+
+
+
+
+/* ===========================
+   КОНТЕЙНЕР НОВОСТЕЙ
+=========================== */
+
+
+.news-container{
+
+    max-width:900px;
+
+    margin:auto;
 
     display:flex;
-    align-items:center;
-    justify-content:center;
 
-    border-radius:50%;
+    flex-direction:column;
 
-    font-size:55px;
-
-    color:#9fdcff;
-
-    background:rgba(255,255,255,.06);
-
-    border:2px solid rgba(159,220,255,.3);
-
-    box-shadow:
-        0 0 35px rgba(120,190,255,.18);
+    gap:30px;
 
 }
 
-.placeholder h1{
 
-    font-size:60px;
 
-    margin-bottom:20px;
 
-    letter-spacing:6px;
+
+/* ===========================
+   КАРТОЧКА НОВОСТИ
+=========================== */
+
+
+.news-card{
+
 
     background:
-        linear-gradient(
-        120deg,
-        #ffffff,
-        #bde9ff,
-        #ffffff
-        );
 
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    rgba(255,255,255,0.75);
 
-}
 
-.placeholder p{
+    backdrop-filter:blur(12px);
 
-    font-size:20px;
 
-    color:#cfdff5;
+    border-radius:25px;
 
-    line-height:1.8;
 
-    margin-bottom:40px;
+    padding:35px;
 
-}
 
-.placeholder-note{
+    box-shadow:
 
-    display:inline-flex;
+    0 15px 40px rgba(50,120,180,0.18);
 
-    align-items:center;
 
-    gap:12px;
+    border:
 
-    padding:18px 28px;
+    1px solid rgba(255,255,255,0.8);
 
-    border-radius:18px;
 
-    background:rgba(255,255,255,.05);
+    transition:0.3s;
 
-    border:1px solid rgba(255,255,255,.12);
-
-    color:#9fdcff;
-
-    font-weight:700;
 
 }
 
-@keyframes fade{
 
-    from{
 
-        opacity:0;
+.news-card:hover{
 
-        transform:translateY(40px);
 
-    }
+    transform:translateY(-5px);
 
-    to{
 
-        opacity:1;
+    box-shadow:
 
-        transform:translateY(0);
+    0 20px 50px rgba(50,130,220,0.28);
 
-    }
 
 }
+
+
+
+
+
+/* ===========================
+   ЗАГОЛОВОК НОВОСТИ
+=========================== */
+
+
+.news-card h2{
+
+
+    color:#226db8;
+
+
+    font-size:28px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+/* ===========================
+   ТЕКСТ
+=========================== */
+
+
+.news-text{
+
+
+    color:#405b70;
+
+
+    font-size:17px;
+
+
+    line-height:1.7;
+
+
+    white-space:pre-line;
+
+
+}
+
+
+
+
+
+/* ===========================
+   НИЖНЯЯ ЧАСТЬ
+=========================== */
+
+
+.news-info{
+
+
+    margin-top:25px;
+
+
+    padding-top:15px;
+
+
+    border-top:
+
+    1px solid rgba(80,150,220,0.25);
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    color:#6c8295;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.news-info i{
+
+
+    color:#4a9de8;
+
+
+    margin-right:7px;
+
+
+}
+
+
+
+
+
+/* ===========================
+   ЗАГРУЗКА
+=========================== */
+
+
+.news-loading{
+
+
+    text-align:center;
+
+
+    color:#5296d8;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.news-loading i{
+
+
+    font-size:45px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+/* ===========================
+   МОБИЛЬНАЯ ВЕРСИЯ
+=========================== */
+
 
 @media(max-width:900px){
 
-    .news-page{
 
-        margin-left:0;
+.news-page{
 
-        padding:30px;
+    margin-left:0;
 
-    }
+    padding:35px 20px;
 
-    .placeholder{
+}
 
-        padding:40px 25px;
 
-    }
 
-    .placeholder h1{
+.news-header h1{
 
-        font-size:42px;
+    font-size:34px;
 
-    }
+}
+
+
+
+.news-card{
+
+    padding:25px;
+
+}
+
+
+
+.news-card h2{
+
+    font-size:23px;
+
+}
+
+
+
+.news-info{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
 
 }
