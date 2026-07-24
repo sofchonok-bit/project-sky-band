@@ -1,69 +1,182 @@
 /* =====================================================
    POSITIONS.CSS
+   Должности проекта "Небесный Вираж"
 ===================================================== */
 
-.positions-page{
+/* ===========================
+   ОСНОВНАЯ ОБЛАСТЬ
+=========================== */
+
+.positions{
 
     margin-left:90px;
 
     min-height:100vh;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
     padding:80px;
 
+    color:#e3f3ff;
+
     background:
-        radial-gradient(
-            circle at top right,
-            rgba(120,190,255,.18),
-            transparent 35%
-        ),
-        linear-gradient(
-            rgba(16,13,23,.92),
-            rgba(16,13,23,.98)
-        ),
-        url("images/background/sky.png");
+
+    radial-gradient(
+        circle at top right,
+        rgba(120,190,255,.18),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        rgba(16,13,23,.94),
+        rgba(16,13,23,.98)
+    ),
+
+    url("images/background/sky.png");
 
     background-size:cover;
+
     background-position:center;
 
-    color:#e3f3ff;
 }
 
-.positions-empty{
 
-    width:700px;
-    max-width:100%;
+
+/* ===========================
+   ШАПКА
+=========================== */
+
+.positions-header{
 
     text-align:center;
 
-    padding:70px 60px;
+    margin-bottom:60px;
 
-    border-radius:35px;
+}
+
+.positions-header h1{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    letter-spacing:10px;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.10),
-            rgba(255,255,255,.04)
-        );
 
-    border:1px solid rgba(255,255,255,.15);
+    linear-gradient(
+        120deg,
+        #ffffff,
+        #cdeeff,
+        #87d5ff,
+        #ffffff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:
+
+    gradientMove 7s linear infinite;
+
+}
+
+.positions-header p{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:#b7d5ef;
+
+    max-width:900px;
+
+    margin-inline:auto;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ===========================
+   БЛОКИ
+=========================== */
+
+.positions-section{
+
+    max-width:1300px;
+
+    margin:90px auto;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    margin-bottom:45px;
+
+    letter-spacing:3px;
+
+    color:#ffffff;
+
+    text-shadow:
+
+    0 0 20px rgba(150,210,255,.25);
+
+}
+
+
+
+/* ===========================
+   СТЕКЛЯННЫЙ БЛОК
+=========================== */
+
+.glass-box{
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+    border-radius:35px;
 
     backdrop-filter:blur(18px);
 
     box-shadow:
-        0 25px 60px rgba(0,0,0,.45),
-        0 0 35px rgba(120,190,255,.12);
 
-    animation:appear .8s ease;
+    0 25px 70px rgba(0,0,0,.45);
+
 }
 
-.positions-empty i{
+
+
+/* ===========================
+   ВСТУПЛЕНИЕ
+=========================== */
+
+.positions-intro{
+
+    padding:55px;
+
+    text-align:center;
+
+}
+
+.positions-intro i{
 
     font-size:90px;
 
@@ -72,84 +185,1685 @@
     margin-bottom:30px;
 
     text-shadow:
-        0 0 30px rgba(120,190,255,.45);
+
+    0 0 35px rgba(120,190,255,.45);
+
 }
 
-.positions-empty h1{
+.positions-intro h2{
 
-    font-size:56px;
+    font-size:46px;
 
-    margin-bottom:20px;
+    margin-bottom:25px;
 
-    font-weight:800;
+    color:#ffffff;
 
-    background:linear-gradient(
-        120deg,
-        #ffffff,
-        #bde9ff,
-        #ffffff
+}
+
+.positions-intro p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    color:#c8dcef;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+}
+
+
+
+/* ===========================
+   ОБЩИЕ КАРТОЧКИ
+=========================== */
+
+.info-card{
+
+    display:flex;
+
+    gap:35px;
+
+    align-items:flex-start;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.03)
     );
 
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
 }
 
-.positions-empty p{
+.info-card:hover{
 
-    font-size:22px;
+    transform:
 
-    color:#cfdff5;
+    translateY(-8px);
+
+    box-shadow:
+
+    0 20px 45px rgba(120,190,255,.15);
+
+}
+
+.card-icon{
+
+    width:95px;
+
+    height:95px;
+
+    flex-shrink:0;
+
+    border-radius:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    rgba(255,255,255,.07);
+
+    font-size:42px;
+
+    color:#9fdcff;
+
+}
+
+.card-content{
+
+    flex:1;
+
+}
+
+.card-content h3{
+
+    font-size:32px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+.card-content span{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:#88cfff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.card-content p{
+
+    color:#d6e8f8;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+.card-content ul{
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+.card-content li{
+
+    margin-bottom:12px;
+
+    color:#bfd7ec;
+
+    line-height:1.7;
+
+}
+
+
+
+/* ===========================
+   АНИМАЦИЯ ГРАДИЕНТА
+=========================== */
+
+@keyframes gradientMove{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:300%;
+
+    }
+
+}
+
+/* =====================================================
+   АКАДЕМИЯ И ЛЕТНЫЙ КОРПУС
+===================================================== */
+
+.academy-section,
+.flight-section{
+
+    margin-top:90px;
+
+}
+
+.academy-header,
+.flight-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.academy-header i,
+.flight-header i{
+
+    width:90px;
+
+    height:90px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:25px;
+
+    font-size:40px;
+
+    color:#9fdcff;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    box-shadow:
+
+    0 0 25px rgba(120,190,255,.25);
+
+}
+
+.academy-header h3,
+.flight-header h3{
+
+    font-size:36px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+.academy-header p,
+.flight-header p{
+
+    color:#c7dff2;
 
     line-height:1.8;
 
-    max-width:520px;
+    font-size:18px;
 
-    margin:auto;
 }
 
-@keyframes appear{
+
+
+/* =====================================================
+   КАРТОЧКИ СТАДИЙ
+===================================================== */
+
+.stage-card{
+
+    display:flex;
+
+    gap:35px;
+
+    margin-bottom:35px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
+}
+
+.stage-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    box-shadow:
+
+    0 20px 50px rgba(120,190,255,.15);
+
+}
+
+.stage-left{
+
+    width:180px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.stage-number{
+
+    width:95px;
+
+    height:95px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#fff;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #5baeff,
+        #9fdcff
+    );
+
+    box-shadow:
+
+    0 0 30px rgba(120,190,255,.45);
+
+    margin-bottom:18px;
+
+}
+
+.stage-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#9fdcff;
+
+    background:
+
+    rgba(159,220,255,.08);
+
+    border:
+
+    1px solid rgba(159,220,255,.25);
+
+}
+
+.stage-right{
+
+    flex:1;
+
+}
+
+.stage-right h3{
+
+    font-size:34px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+.stage-right span{
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    color:#8fd2ff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.stage-right p{
+
+    color:#d6e7f6;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+.stage-right ul{
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+.stage-right li{
+
+    color:#bfd7ec;
+
+    margin-bottom:12px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   ЛЕТУН
+===================================================== */
+
+.flyer-card{
+
+    margin-top:45px;
+
+    padding:45px;
+
+    border-radius:35px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(90,170,255,.12),
+        rgba(255,255,255,.03)
+    );
+
+    border:
+
+    1px solid rgba(130,200,255,.25);
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.flyer-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.flyer-header i{
+
+    width:95px;
+
+    height:95px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:25px;
+
+    font-size:42px;
+
+    color:#9fdcff;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+}
+
+.flyer-header h3{
+
+    font-size:40px;
+
+    color:#ffffff;
+
+}
+
+.flyer-header span{
+
+    color:#9fdcff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.flyer-card p{
+
+    color:#d5e7f8;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+.flyer-card ul{
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+.flyer-card li{
+
+    margin-bottom:12px;
+
+    color:#bfd7ec;
+
+}
+
+/* =====================================================
+   РАБОЧИЕ ДОЛЖНОСТИ
+===================================================== */
+
+.job-section{
+
+    margin-top:100px;
+
+}
+
+.job-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:45px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.job-header i{
+
+    width:90px;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+    border-radius:25px;
+
+    font-size:42px;
+
+    color:#9fdcff;
+
+    background:
+    rgba(255,255,255,.06);
+
+    box-shadow:
+    0 0 30px rgba(120,190,255,.25);
+
+}
+
+.job-header h3{
+
+    font-size:38px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+.job-header p{
+
+    color:#c7dff2;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   КАРТОЧКА ДОЛЖНОСТИ
+===================================================== */
+
+.job-card{
+
+    display:flex;
+
+    gap:35px;
+
+    margin-bottom:35px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.03)
+    );
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
+}
+
+.job-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    box-shadow:
+
+    0 20px 45px rgba(120,190,255,.18);
+
+}
+
+.job-icon{
+
+    width:95px;
+
+    height:95px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:25px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(90,170,255,.25),
+        rgba(255,255,255,.05)
+    );
+
+    color:#9fdcff;
+
+    font-size:42px;
+
+}
+
+.job-content{
+
+    flex:1;
+
+}
+
+.job-content h3{
+
+    font-size:32px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+.job-content span{
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    color:#8fd2ff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.job-content p{
+
+    color:#d6e7f6;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+.job-content ul{
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+.job-content li{
+
+    margin-bottom:12px;
+
+    color:#bfd7ec;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   МЕДИЦИНСКИЙ КОРПУС
+===================================================== */
+
+.medical-section{
+
+    margin-top:110px;
+
+}
+
+.medical-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:45px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+}
+
+.medical-header i{
+
+    width:90px;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:25px;
+
+    flex-shrink:0;
+
+    font-size:42px;
+
+    color:#ffb8b8;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+    box-shadow:
+
+    0 0 30px rgba(255,120,120,.18);
+
+}
+
+.medical-header h3{
+
+    font-size:38px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+.medical-header p{
+
+    color:#c7dff2;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+/* =====================================================
+   КАРТОЧКИ МЕДИКОВ
+===================================================== */
+
+.medical-card{
+
+    display:flex;
+
+    gap:35px;
+
+    margin-bottom:35px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.03)
+    );
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
+}
+
+.medical-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    box-shadow:
+
+    0 20px 45px rgba(255,120,120,.12);
+
+}
+
+.medical-icon{
+
+    width:95px;
+
+    height:95px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:25px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(255,140,140,.18),
+        rgba(255,255,255,.05)
+    );
+
+    color:#ffbcbc;
+
+    font-size:42px;
+
+}
+
+.medical-content{
+
+    flex:1;
+
+}
+
+.medical-content h3{
+
+    font-size:32px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+.medical-content span{
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    color:#ffc8c8;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.medical-content p{
+
+    color:#d6e7f6;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+.medical-content ul{
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+.medical-content li{
+
+    color:#bfd7ec;
+
+    margin-bottom:12px;
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+   ПОГОДНЫЙ КОРПУС
+===================================================== */
+
+.weather-section{
+
+    margin-top:110px;
+
+}
+
+.weather-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:45px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.weather-header i{
+
+    width:90px;
+    height:90px;
+
+    flex-shrink:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:25px;
+
+    font-size:42px;
+
+    color:#9fdcff;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(120,190,255,.18),
+        rgba(255,255,255,.05)
+    );
+
+    box-shadow:
+
+    0 0 35px rgba(120,190,255,.28);
+
+}
+
+.weather-header h3{
+
+    font-size:38px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+.weather-header p{
+
+    color:#c8ddf2;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+/* =====================================================
+   КАРТОЧКА ПОГОДНОГО КОРПУСА
+===================================================== */
+
+.weather-card{
+
+    display:flex;
+
+    gap:35px;
+
+    margin-bottom:35px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.03)
+    );
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
+}
+
+.weather-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    box-shadow:
+
+    0 20px 50px rgba(120,190,255,.18);
+
+}
+
+.weather-icon{
+
+    width:95px;
+
+    height:95px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:25px;
+
+    font-size:42px;
+
+    color:#9fdcff;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(120,190,255,.2),
+        rgba(255,255,255,.05)
+    );
+
+}
+
+.weather-content{
+
+    flex:1;
+
+}
+
+.weather-content h3{
+
+    font-size:32px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+.weather-content span{
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    color:#9fdcff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.weather-content p{
+
+    color:#d6e7f6;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+.weather-content ul{
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+.weather-content li{
+
+    margin-bottom:12px;
+
+    color:#bfd7ec;
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================================
+   СВЕТЯЩИЕСЯ ПОЛОСКИ
+===================================================== */
+
+.stage-card,
+.job-card,
+.medical-card,
+.weather-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.stage-card::before,
+.job-card::before,
+.medical-card::before,
+.weather-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #7ecbff,
+        #5daeff,
+        transparent
+    );
+
+    opacity:.75;
+
+}
+
+.weather-card::before{
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #cfefff,
+        #79cfff,
+        transparent
+    );
+
+}
+
+.medical-card::before{
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #ffb5b5,
+        #ff7b7b,
+        transparent
+    );
+
+}
+
+.job-card::before{
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #ffe5a4,
+        #ffc44f,
+        transparent
+    );
+
+}
+
+
+
+/* =====================================================
+   ПЛАВНОЕ ПОЯВЛЕНИЕ
+===================================================== */
+
+.positions-header,
+.positions-intro,
+.academy-header,
+.flight-header,
+.job-header,
+.medical-header,
+.weather-header,
+.stage-card,
+.flyer-card,
+.job-card,
+.medical-card,
+.weather-card{
+
+    animation:
+
+    fadeUp .7s ease both;
+
+}
+
+@keyframes fadeUp{
 
     from{
 
         opacity:0;
-        transform:translateY(40px);
+
+        transform:translateY(35px);
 
     }
 
     to{
 
         opacity:1;
+
         transform:translateY(0);
 
     }
 
 }
 
-@media(max-width:900px){
+/* =====================================================
+   ФИНАЛЬНЫЙ БЛОК
+===================================================== */
 
-    .positions-page{
+.positions-end{
 
-        margin-left:0;
-        padding:30px;
+    margin-top:120px;
 
-    }
+    text-align:center;
 
-    .positions-empty{
+    padding:70px 60px;
 
-        padding:45px 30px;
+    border-radius:40px;
 
-    }
+    background:
 
-    .positions-empty h1{
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
 
-        font-size:40px;
+    border:
 
-    }
+    1px solid rgba(255,255,255,.12);
 
-    .positions-empty p{
+    box-shadow:
 
-        font-size:18px;
-
-    }
+    0 25px 60px rgba(0,0,0,.35);
 
 }
+
+.positions-end i{
+
+    font-size:90px;
+
+    color:#9fdcff;
+
+    margin-bottom:25px;
+
+    text-shadow:
+
+    0 0 35px rgba(120,190,255,.35);
+
+}
+
+.positions-end h2{
+
+    font-size:46px;
+
+    color:#ffffff;
+
+    margin-bottom:25px;
+
+}
+
+.positions-end p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#d6e7f6;
+
+    line-height:1.9;
+
+    font-size:20px;
+
+}
+
+
+
+/* =====================================================
+   КНОПКА
+===================================================== */
+
+.positions-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:45px;
+
+    padding:22px 48px;
+
+    border-radius:100px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #61b7ff,
+        #91dcff
+    );
+
+    box-shadow:
+
+        0 12px 35px rgba(110,190,255,.35);
+
+    transition:.35s;
+
+}
+
+.positions-button i{
+
+    font-size:24px;
+
+    margin:0;
+
+    color:white;
+
+}
+
+.positions-button:hover{
+
+    transform:
+
+    translateY(-5px);
+
+    box-shadow:
+
+        0 18px 45px rgba(110,190,255,.45);
+
+}
+
+
+
+/* =====================================================
+   АДАПТИВ
+===================================================== */
+
+@media(max-width:1100px){
+
+.stage-card,
+.job-card,
+.medical-card,
+.weather-card{
+
+    flex-direction:column;
+
+}
+
+.stage-left{
+
+    width:100%;
+
+}
+
+.job-icon,
+.medical-icon,
+.weather-icon{
+
+    width:80px;
+
+    height:80px;
+
+}
+
+}
+
+
+
+@media(max-width:850px){
+
+.positions{
+
+    padding:40px;
+
+}
+
+.positions-header h1{
+
+    font-size:48px;
+
+    letter-spacing:5px;
+
+}
+
+.positions-header p{
+
+    font-size:18px;
+
+}
+
+.positions-intro{
+
+    padding:35px;
+
+}
+
+.positions-intro h2{
+
+    font-size:34px;
+
+}
+
+.positions-intro p{
+
+    font-size:17px;
+
+}
+
+.section-title{
+
+    font-size:32px;
+
+}
+
+.academy-header,
+.flight-header,
+.job-header,
+.medical-header,
+.weather-header{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.stage-right h3,
+.job-content h3,
+.medical-content h3,
+.weather-content h3{
+
+    font-size:28px;
+
+}
+
+.positions-end{
+
+    padding:45px 30px;
+
+}
+
+.positions-end h2{
+
+    font-size:34px;
+
+}
+
+.positions-end p{
+
+    font-size:17px;
+
+}
+
+.positions-button{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+}
+
+
+
+@media(max-width:600px){
+
+.positions{
+
+    padding:25px;
+
+}
+
+.positions-header h1{
+
+    font-size:36px;
+
+    letter-spacing:3px;
+
+}
+
+.card-content p,
+.stage-right p,
+.job-content p,
+.medical-content p,
+.weather-content p{
+
+    font-size:16px;
+
+}
+
+.positions-end i{
+
+    font-size:70px;
+
+}
+
+.positions-end h2{
+
+    font-size:28px;
+
+}
+
+.positions-button{
+
+    font-size:18px;
+
+    padding:18px 28px;
+
+}
+
+}
+
+
+
+/* =====================================================
+   КОНЕЦ ФАЙЛА
+===================================================== */
