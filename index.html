@@ -245,21 +245,19 @@ window.addEventListener("load", () => {
 
 <script>
 
+console.log("Проверяем новости");
+
+
 supabaseClient
     .from("news")
     .select("*")
-    .then(({data, error}) => {
+    .then(result => {
 
-        console.log("Новости:", data);
-
-        console.log("Ошибка:", error);
+        console.log("Полный ответ Supabase:");
+        console.log(result);
 
     });
 
-</script>
-
-<script>
-console.log("САЙТ ЗАПУСТИЛСЯ");
 </script>
 
 </body>
