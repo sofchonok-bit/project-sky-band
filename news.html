@@ -7,6 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
 <title>Новости | Небесный Вираж</title>
 
 
@@ -18,14 +19,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-<!-- Основные стили сайта -->
+<!-- Основные стили -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Стили новостей -->
+
+<!-- Новости -->
 <link rel="stylesheet" href="news.css">
 
 
 </head>
+
 
 
 <body>
@@ -41,36 +44,41 @@
 
 
 
+
+
 <!-- Боковая панель -->
 
 <aside class="sidebar">
 
 
-    <a href="index.html" class="side-button">
+<a href="index.html" class="side-button">
 
-        <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-house"></i>
 
-        <span>Главная</span>
+    <span>Главная</span>
 
-    </a>
-
-
-    <a href="academy.html" class="side-button">
-
-        <i class="fa-solid fa-graduation-cap"></i>
-
-        <span>Академия</span>
-
-    </a>
+</a>
 
 
-    <a href="news.html" class="side-button active">
 
-        <i class="fa-solid fa-scroll"></i>
+<a href="academy.html" class="side-button">
 
-        <span>Новости</span>
+    <i class="fa-solid fa-graduation-cap"></i>
 
-    </a>
+    <span>Академия</span>
+
+</a>
+
+
+
+
+<a href="news.html" class="side-button active">
+
+    <i class="fa-solid fa-scroll"></i>
+
+    <span>Новости</span>
+
+</a>
 
 
 </aside>
@@ -79,19 +87,27 @@
 
 
 
+
+
 <main class="news-page">
+
 
 
 <section class="news-header">
 
 
 <h1>
+
 Новости проекта
+
 </h1>
 
 
+
 <p>
+
 Актуальные события, объявления и важные сообщения Академии «Небесный Вираж»
+
 </p>
 
 
@@ -100,22 +116,34 @@
 
 
 
-<section id="news-container" class="news-container">
 
-<!-- Новости будут загружаться сюда -->
+
+
+<section class="news-list">
+
+
+<div id="news-container">
+
 
 <div class="news-loading">
 
+
 <i class="fa-solid fa-cloud"></i>
+
 
 <p>
 Загрузка новостей...
 </p>
 
+
+</div>
+
+
 </div>
 
 
 </section>
+
 
 
 
@@ -126,30 +154,47 @@
 
 
 
+
+
+<!-- Supabase -->
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="supabase.js"></script>
+
+
+<!-- Загрузка новостей -->
 
 <script src="news.js"></script>
 
 
 
 
+
+
 <script>
+
 
 window.addEventListener("load", () => {
 
+
     setTimeout(() => {
+
 
         document.getElementById("loader")
         ?.classList.add("hidden");
 
+
     },1300);
+
+
 
 });
 
 
+
 </script>
+
 
 
 
