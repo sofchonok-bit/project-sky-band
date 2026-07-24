@@ -1,0 +1,348 @@
+/* =====================================================
+   ADMIN.CSS
+   Админ-панель новостей
+   Проект "Небесный Вираж"
+===================================================== */
+
+
+
+/* ===========================
+   СТРАНИЦА
+=========================== */
+
+
+.admin-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+
+    background:
+
+    linear-gradient(
+        rgba(190,225,255,0.45),
+        rgba(255,255,255,0.7)
+    );
+
+}
+
+
+
+
+
+/* ===========================
+   БЛОК АДМИНКИ
+=========================== */
+
+
+.admin-box{
+
+
+    width:100%;
+
+    max-width:650px;
+
+
+    background:
+
+    rgba(255,255,255,0.8);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:30px;
+
+
+    padding:45px;
+
+
+    box-shadow:
+
+    0 20px 60px rgba(40,120,200,0.2);
+
+
+}
+
+
+
+
+
+.admin-box h1{
+
+
+    text-align:center;
+
+
+    color:#2878c7;
+
+
+    font-size:36px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.admin-box p{
+
+
+    text-align:center;
+
+
+    color:#607b94;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+/* ===========================
+   ФОРМА
+=========================== */
+
+
+#news-form{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+#news-form input,
+
+
+#news-form textarea{
+
+
+    width:100%;
+
+
+    padding:16px 20px;
+
+
+    border-radius:18px;
+
+
+    border:
+
+
+    1px solid rgba(70,150,220,0.3);
+
+
+    background:
+
+    rgba(255,255,255,0.9);
+
+
+    font-size:16px;
+
+
+    font-family:inherit;
+
+
+    outline:none;
+
+
+    transition:0.25s;
+
+
+}
+
+
+
+
+
+#news-form textarea{
+
+
+    min-height:180px;
+
+
+    resize:vertical;
+
+
+}
+
+
+
+
+
+#news-form input:focus,
+
+
+#news-form textarea:focus{
+
+
+    border-color:#4aa0e8;
+
+
+    box-shadow:
+
+    0 0 15px rgba(70,160,240,0.35);
+
+
+}
+
+
+
+
+
+/* ===========================
+   КНОПКА
+=========================== */
+
+
+#news-form button{
+
+
+    margin-top:10px;
+
+
+    padding:16px;
+
+
+    border-radius:20px;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #4ba6ed,
+        #2878c7
+    );
+
+
+    color:white;
+
+
+    font-size:17px;
+
+
+    font-weight:600;
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+
+#news-form button:hover{
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+    0 10px 25px rgba(40,120,200,0.35);
+
+
+}
+
+
+
+
+#news-form button i{
+
+
+    margin-right:8px;
+
+
+}
+
+
+
+
+
+/* ===========================
+   РЕЗУЛЬТАТ
+=========================== */
+
+
+#result{
+
+
+    margin-top:25px;
+
+
+    text-align:center;
+
+
+    color:#2878c7;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+/* ===========================
+   МОБИЛЬНАЯ ВЕРСИЯ
+=========================== */
+
+
+@media(max-width:700px){
+
+
+.admin-page{
+
+    padding:20px;
+
+}
+
+
+.admin-box{
+
+    padding:30px 20px;
+
+}
+
+
+.admin-box h1{
+
+    font-size:28px;
+
+}
+
+
+}

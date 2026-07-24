@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Админ-панель | Небесный Вираж</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="admin.css">
+
+
+</head>
+
+
+<body>
+
+
+<main class="admin-page">
+
+
+<section class="admin-box">
+
+
+<h1>
+Админ-панель новостей
+</h1>
+
+
+<p>
+Создание новых публикаций
+</p>
+
+
+
+<form id="news-form">
+
+
+<input 
+type="text"
+id="title"
+placeholder="Заголовок новости"
+required
+>
+
+
+
+
+<textarea
+id="content"
+placeholder="Текст новости"
+required
+></textarea>
+
+
+
+<input
+type="text"
+id="author"
+placeholder="Автор"
+value="Администрация"
+>
+
+
+
+
+<button type="submit">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Опубликовать
+
+</button>
+
+
+
+</form>
+
+
+
+<div id="result"></div>
+
+
+
+</section>
+
+
+
+</main>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="admin.js"></script>
+
+
+
+</body>
+
+</html>
