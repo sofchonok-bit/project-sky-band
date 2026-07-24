@@ -53,20 +53,16 @@ form.addEventListener("submit", async (event) => {
 
 
 
-    if(error){
+   if(error){
 
+    console.error("Ошибка Supabase:", error);
 
-        console.error(error);
+    result.textContent =
+    error.message;
 
+    return;
 
-        result.textContent =
-        "Ошибка публикации";
-
-
-        return;
-
-
-    }
+}
 
 
 
