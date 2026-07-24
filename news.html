@@ -7,78 +7,176 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <title>Новости | Небесный Вираж</title>
 
 
-<!-- Шрифты -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 
 
-<!-- Иконки -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-<!-- Основные стили -->
 <link rel="stylesheet" href="style.css">
 
-
-<!-- Новости -->
 <link rel="stylesheet" href="news.css">
 
 
 </head>
 
 
-
 <body>
 
 
-<!-- Загрузчик -->
 
-<div id="loader">
+<!-- SIDEBAR -->
 
-    <div class="loader-wing"></div>
+<!-- ====================== -->
+<!-- БОКОВОЕ МЕНЮ -->
+<!-- ====================== -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+    <i class="fa-solid fa-feather-pointed"></i>
+
+    <span>
+        Небесный Вираж
+    </span>
 
 </div>
 
 
 
+<nav>
 
 
-<!-- Боковая панель -->
-
-<aside class="sidebar">
-
-
-<a href="index.html" class="side-button">
+<a href="index.html">
 
     <i class="fa-solid fa-house"></i>
 
-    <span>Главная</span>
+    <span>
+        Главная
+    </span>
 
 </a>
 
 
 
-<a href="academy.html" class="side-button">
+<a href="academy.html">
 
     <i class="fa-solid fa-graduation-cap"></i>
 
-    <span>Академия</span>
+    <span>
+        Академия
+    </span>
 
 </a>
 
 
 
 
-<a href="news.html" class="side-button active">
+<a href="corps.html">
+
+    <i class="fa-solid fa-cloud"></i>
+
+    <span>
+        Корпуса
+    </span>
+
+</a>
+
+
+
+
+<a href="rules.html">
 
     <i class="fa-solid fa-scroll"></i>
 
-    <span>Новости</span>
+    <span>
+        Правила
+    </span>
 
 </a>
+
+
+
+
+<a href="members.html">
+
+    <i class="fa-solid fa-user-group"></i>
+
+    <span>
+        Работники
+    </span>
+
+</a>
+
+
+
+
+<a href="positions.html">
+
+    <i class="fa-solid fa-id-badge"></i>
+
+    <span>
+        Должности
+    </span>
+
+</a>
+
+
+
+
+<a href="administration.html">
+
+    <i class="fa-solid fa-crown"></i>
+
+    <span>
+        Администрация
+    </span>
+
+</a>
+
+
+
+
+<a href="news.html" class="active">
+
+    <i class="fa-solid fa-newspaper"></i>
+
+    <span>
+        Новости
+    </span>
+
+</a>
+
+
+
+</nav>
+
+
+
+
+
+
+<a href="https://t.me/projectskybend_bot"
+target="_blank"
+class="join-btn">
+
+
+<i class="fa-solid fa-user-plus"></i>
+
+
+<span>
+Вступить
+</span>
+
+
+</a>
+
+
 
 
 </aside>
@@ -93,22 +191,26 @@
 
 
 
+
+
+<div class="space-stars"></div>
+
+
+
+
+
 <section class="news-header">
 
 
 <h1>
-
 Новости проекта
-
 </h1>
 
 
-
 <p>
-
-Актуальные события, объявления и важные сообщения Академии «Небесный Вираж»
-
+Актуальные события Академии «Небесный Вираж»
 </p>
+
 
 
 </section>
@@ -119,24 +221,18 @@
 
 
 
-<section class="news-list">
-
-
-<div id="news-container">
+<section id="news-container">
 
 
 <div class="news-loading">
 
 
-<i class="fa-solid fa-cloud"></i>
+<i class="fa-solid fa-spinner"></i>
 
 
 <p>
 Загрузка новостей...
 </p>
-
-
-</div>
 
 
 </div>
@@ -156,44 +252,15 @@
 
 
 
-<!-- Supabase -->
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 
 <script src="supabase.js"></script>
 
 
-<!-- Загрузка новостей -->
-
 <script src="news.js"></script>
-
-
-
-
-
-
-<script>
-
-
-window.addEventListener("load", () => {
-
-
-    setTimeout(() => {
-
-
-        document.getElementById("loader")
-        ?.classList.add("hidden");
-
-
-    },1300);
-
-
-
-});
-
-
-
-</script>
 
 
 
